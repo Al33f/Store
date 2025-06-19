@@ -2,11 +2,13 @@
 
 import { convertToPlainObject } from "../utils";
 import { LATEST_PRODUCTS_LIMIT } from "../constants";
-import { prisma } from "@/db/prisma";
+// import { prisma } from "@/db/prisma";
+import { PrismaClient } from "@/lib/generated/prisma";
 
 // This function fetches the latest products from the database as a Prisma object.
 // Created a function in lib/utils.ts to convert Prisma objects to regular JS objects.
 export async function getLatestProducts() {
+    const prisma = new PrismaClient();
     try {
         const products = await prisma.product.findMany({
             take: LATEST_PRODUCTS_LIMIT,
