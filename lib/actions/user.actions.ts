@@ -6,7 +6,6 @@ import { isRedirectError } from "next/dist/client/components/redirect-error";
 import { hashSync } from "bcrypt-ts-edge";
 import {prisma} from "@/db/prisma";
 import { formatError } from "../utils";
-import { format } from "path";
 
 // Sign in the user with credentials
 export async function signInWithCredentials(prevState: unknown,formData: FormData) {
