@@ -1,19 +1,18 @@
-
 @import "tw-animate-css";
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @theme {
-  --breakpoint-*:initial;
+  --breakpoint-*: initial;
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 976px;
-  --color-orange-500: #FFA500;
+  --color-orange-500: #ffa500;
 }
 
 @layer utilities {
